@@ -1,0 +1,897 @@
+<!-- HTML template for ShareCart product catalog page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta & page setup -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Catalog - ShareCart</title>
+  
+  <!-- CSS links -->
+  <link rel="stylesheet" href="homeStyle.css">
+  <link rel="stylesheet" href="catalogStyle.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+  <!-- Sidebar toggle (mobile menu) -->
+  <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle" hidden>
+  <label for="sidebar-toggle" class="menu-button">
+    <img src="./images/MENU.jpg" alt="Menu">
+  </label>
+
+  <!-- Sidebar category menu -->
+  <div class="side-menu">
+    <a href="#fruits">Fruits & Vegetables</a>
+    <a href="#dairy">Dairy</a>
+    <a href="#drinks">Drinks</a>
+    <a href="#bakery">Baked Goods</a>
+    <a href="#meat">Meat & Fish</a>
+  </div>
+
+  <!-- Top navigation bar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <!-- Logo and brand -->
+      <a class="navbar-brand" href="./home.html">
+        <img src="./images/logo.png" alt="logo" id="logo-navbar">
+      </a>
+
+      <!-- Collapse menu button for mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="./home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="./contactUs.html">Contact Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="./account.html">My Account</a></li>
+          <li class="nav-item"><a class="nav-link" href="./home.html">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main content wrapper -->
+  <main class="container py-5">
+    <h1>Product Catalog</h1>
+    <!-- Button to go back to orders page -->
+    <button onclick="window.location.href='./orders.html'" class="back-button">&larr; Back to Orders</button>
+
+    <!-- Sticky category bar -->
+    <nav class="category-nav">
+      <a href="#fruits">Fruits & Vegetables</a>
+      <a href="#dairy">Dairy</a>
+      <a href="#drinks">Drinks</a>
+      <a href="#bakery">Baked Goods</a>
+      <a href="#meat">Meat & Fish</a>
+    </nav>
+
+    <!-- Search box -->
+    <div class="search-container">
+      <input type="text" id="search-bar" placeholder="Search products..." />
+      <button id="search-button">Search</button>
+    </div>
+
+    <!-- Message when no products found -->
+    <p id="no-results-message" style="display: none; color: red; font-weight: bold; text-align: center; margin-top: 20px;">
+      No products found.
+    </p>
+
+    <!-- Product categories below... -->
+    <div id="fruits" class="product-category">
+      <h2>Fruits & Vegetables</h2>
+      
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="./images/products/abocado.webp" alt="Avocado">
+          <h3>Avocado</h3>
+          <p>₪5.00 per unit</p>
+          <p><small>Group quantity: 8</small></p>
+          <div class="quantity-controls">
+            <button>-</button>
+            <p>0</p>
+            <button>+</button>
+          </div>
+          <p class="discount">10% off for 8+</p>
+        </div>
+        <div class="product-card">
+            <img src="./images/products/strwbery.webp" alt="Strawberry">
+            <h3>Strawberry</h3>
+            <p>₪8.90 per box</p>
+            <p><small>Group quantity: 5</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 5+</p>
+          </div>
+        <div class="product-card">
+          <img src="./images/products/banana.webp" alt="Banana">
+          <h3>Banana</h3>
+          <p>₪3.50 per unit</p>
+          <p><small>Group quantity: 10</small></p>
+          <div class="quantity-controls">
+            <button>-</button>
+            <p>0</p>
+            <button>+</button>
+          </div>
+          <p class="discount">10% off for 10+</p>
+        </div>
+            <div class="product-card">
+              <img src="./images/products/gamba.webp" alt="Red Pepper">
+              <h3>Red Pepper</h3>
+              <p>₪4.90 per unit</p>
+              <p><small>Group quantity: 6</small></p>
+              <div class="quantity-controls">
+                <button>-</button>
+                <p>0</p>
+                <button>+</button>
+              </div>
+              <p class="discount">10% off for 6+</p>
+            </div>
+            <div class="product-card">
+                <img src="./images/products/melon.webp" alt="Melon">
+                <h3>Melon</h3>
+                <p>₪5.90 per unit</p>
+                <p><small>Group quantity: 4</small></p>
+                <div class="quantity-controls">
+                  <button>-</button>
+                  <p>0</p>
+                  <button>+</button>
+                </div>
+                <p class="discount">10% off for 4+</p>
+              </div>
+            <div class="product-card">
+              <img src="./images/products/garlic.webp" alt="Garlic">
+              <h3>Garlic</h3>
+              <p>₪3.90 per head</p>
+              <p><small>Group quantity: 8</small></p>
+              <div class="quantity-controls">
+                <button>-</button>
+                <p>0</p>
+                <button>+</button>
+              </div>
+              <p class="discount">10% off for 8+</p>
+            </div>
+            <div class="product-card">
+                <img src="./images/products/onion.webp" alt="Red Onion">
+                <h3>Red Onion</h3>
+                <p>₪3.90 per unit</p>
+                <p><small>Group quantity: 6</small></p>
+                <div class="quantity-controls">
+                  <button>-</button>
+                  <p>0</p>
+                  <button>+</button>
+                </div>
+                <p class="discount">10% off for 6+</p>
+              </div>
+            <div class="product-card">
+                <img src="./images/products/tomato.webp" alt="Tomato">
+                <h3>Tomato</h3>
+                <p>₪4.50 per unit</p>
+                <p><small>Group quantity: 6</small></p>
+                <div class="quantity-controls">
+                  <button>-</button>
+                  <p>0</p>
+                  <button>+</button>
+                </div>
+                <p class="discount">10% off for 6+</p>
+              </div>
+              <div class="product-card">
+                <img src="./images/products/cucamber.webp" alt="Cucumbers">
+                <h3>Cucumbers</h3>
+                <p>₪3.90 per kg</p>
+                <p><small>Group quantity: 5</small></p>
+                <div class="quantity-controls">
+                  <button>-</button>
+                  <p>0</p>
+                  <button>+</button>
+                </div>
+                <p class="discount">10% off for 5+</p>
+              </div>
+              <div class="product-card">
+                <img src="./images/products/petel.webp" alt="Raspberry">
+                <h3>Raspberry</h3>
+                <p>₪9.90 per box</p>
+                <p><small>Group quantity: 5</small></p>
+                <div class="quantity-controls">
+                  <button>-</button>
+                  <p>0</p>
+                  <button>+</button>
+                </div>
+                <p class="discount">10% off for 5+</p>
+              </div>
+              
+              <div class="product-card">
+                <img src="./images/products/pinapple.webp" alt="Pineapple">
+                <h3>Pineapple</h3>
+                <p>₪7.50 per unit</p>
+                <p><small>Group quantity: 4</small></p>
+                <div class="quantity-controls">
+                  <button>-</button>
+                  <p>0</p>
+                  <button>+</button>
+                </div>
+                <p class="discount">10% off for 4+</p>
+              </div>
+              
+              <div class="product-card">
+                <img src="./images/products/poteto.webp" alt="Potatoes Bag">
+                <h3>Potatoes (Bag)</h3>
+                <p>₪14.90 per bag</p>
+                <p><small>Group quantity: 2</small></p>
+                <div class="quantity-controls">
+                  <button>-</button>
+                  <p>0</p>
+                  <button>+</button>
+                </div>
+                <p class="discount">10% off for 2+</p>
+              </div>
+              
+            <div class="product-card">
+                <img src="./images/products/corn.webp" alt="Corn">
+                <h3>Corn</h3>
+                <p>₪7.50 per unit</p>
+                <p><small>Group quantity: 5</small></p>
+                <div class="quantity-controls">
+                  <button>-</button>
+                  <p>0</p>
+                  <button>+</button>
+                </div>
+                <p class="discount">10% off for 5+</p>
+              </div>
+      </div>
+    </div>
+
+    <div id="dairy" class="product-category">
+      <h2>Dairy</h2>
+      <div class="product-grid">
+        <div class="product-card">
+            <img src="./images/products/eggs.webp" alt="Eggs">
+            <h3>Eggs (Dozen)</h3>
+            <p>₪12.90 per carton</p>
+            <p><small>Group quantity: 4</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 4+</p>
+          </div>
+        <div class="product-card">
+          <img src="./images/products/banana_milk.webp" alt="Banana Milk">
+          <h3>Banana Milk</h3>
+          <p>₪6.90 per unit</p>
+          <p><small>Group quantity: 6</small></p>
+          <div class="quantity-controls">
+            <button>-</button>
+            <p>0</p>
+            <button>+</button>
+          </div>
+          <p class="discount">5% off for 6+</p>
+        </div>
+        <div class="product-card">
+            <img src="./images/products/milk1.webp" alt="Milk 1%">
+            <h3>Milk 1%</h3>
+            <p>₪5.50 per liter</p>
+            <p><small>Group quantity: 6</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 6+</p>
+          </div>
+          
+          <div class="product-card">
+            <img src="./images/products/milk3.webp" alt="Milk 3%">
+            <h3>Milk 3%</h3>
+            <p>₪5.90 per liter</p>
+            <p><small>Group quantity: 6</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 6+</p>
+          </div>
+          
+          <div class="product-card">
+            <img src="./images/products/moka.webp" alt="Moka Drink">
+            <h3>Moka Drink</h3>
+            <p>₪6.90 per bottle</p>
+            <p><small>Group quantity: 4</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 4+</p>
+          </div>
+          <div class="product-card">
+            <img src="./images/products/fanta_orange.webp" alt="Fanta Orange">
+            <h3>Fanta Orange</h3>
+            <p>₪6.90 per bottle</p>
+            <p><small>Group quantity: 6</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 6+</p>
+          </div>
+          
+          <div class="product-card">
+            <img src="./images/products/fanta_red.webp" alt="Fanta Exotic Red">
+            <h3>Fanta Exotic Red</h3>
+            <p>₪6.90 per bottle</p>
+            <p><small>Group quantity: 6</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 6+</p>
+          </div>
+          
+          <div class="product-card">
+            <img src="./images/products/muztarella_presca.webp" alt="Mozzarella Fresca">
+            <h3>Mozzarella Fresca</h3>
+            <p>₪12.90 per pack</p>
+            <p><small>Group quantity: 3</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 3+</p>
+          </div>
+          
+        <div class="product-card">
+            <img src="./images/products/koteg.webp" alt="Cottage Cheese">
+            <h3>Cottage Cheese 5%</h3>
+            <p>₪6.90 per tub</p>
+            <p><small>Group quantity: 6</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 6+</p>
+          </div>
+          
+          <div class="product-card">
+            <img src="./images/products/labane.webp" alt="Labane Cheese">
+            <h3>Labane Cheese 9%</h3>
+            <p>₪9.90 per tub</p>
+            <p><small>Group quantity: 4</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 4+</p>
+          </div>
+        <div class="product-card">
+            <img src="./images/products/soy_milk.webp" alt="Soy Milk">
+            <h3>Soy Milk</h3>
+            <p>₪7.90 per liter</p>
+            <p><small>Group quantity: 6</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 6+</p>
+          </div>
+        <div class="product-card">
+            <img src="./images/products/recota.webp" alt="Ricotta Cheese">
+            <h3>Ricotta Cheese</h3>
+            <p>₪8.90 per tub</p>
+            <p><small>Group quantity: 5</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 5+</p>
+          </div>
+        <div class="product-card">
+            <img src="./images/products/white_cheese.webp" alt="White Cheese 5%">
+            <h3>White Cheese 5%</h3>
+            <p>₪7.90 per tub</p>
+            <p><small>Group quantity: 5</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 5+</p>
+          </div>
+          
+
+        <div class="product-card">
+          <img src="./images/products/alpro_almond_milk.webp" alt="Alpro Almond Milk">
+          <h3>Alpro Almond Milk</h3>
+          <p>₪8.50 per unit</p>
+          <p><small>Group quantity: 6</small></p>
+          <div class="quantity-controls">
+            <button>-</button>
+            <p>0</p>
+            <button>+</button>
+          </div>
+          <p class="discount">5% off for 6+</p>
+        </div>
+        <div class="product-card">
+            <img src="./images/products/yellow_cheese.webp" alt="Yellow Cheese">
+            <h3>Yellow Cheese</h3>
+            <p>₪18.90 per pack</p>
+            <p><small>Group quantity: 4</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 4+</p>
+          </div>
+          
+          <div class="product-card">
+            <img src="./images/products/ztfatit.webp" alt="Tzfatit Cheese 5%">
+            <h3>Tzfatit Cheese 5%</h3>
+            <p>₪9.90 per tub</p>
+            <p><small>Group quantity: 5</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 5+</p>
+          </div>
+      </div>
+    </div>
+
+    <div id="drinks" class="product-category">
+      <h2>Drinks</h2>
+      <div class="product-grid">
+        <div class="product-card">
+            <img src="./images/products/coca_cola.webp" alt="Coca Cola Classic">
+            <h3>Coca Cola Classic</h3>
+            <p>₪6.90 per bottle</p>
+            <p><small>Group quantity: 6</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 6+</p>
+          </div>
+          <div class="product-card">
+            <img src="./images/products/spring_grape.webp" alt="Spring Grape Juice">
+            <h3>Spring Grape Juice</h3>
+            <p>₪6.50 per bottle</p>
+            <p><small>Group quantity: 6</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 6+</p>
+          </div>
+          
+          <div class="product-card">
+            <img src="./images/products/spring_mango.webp" alt="Spring Mango Juice">
+            <h3>Spring Mango Juice</h3>
+            <p>₪6.50 per bottle</p>
+            <p><small>Group quantity: 6</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 6+</p>
+          </div>
+          
+          <div class="product-card">
+            <img src="./images/products/spring_orange.webp" alt="Spring Orange Juice">
+            <h3>Spring Orange Juice</h3>
+            <p>₪6.50 per bottle</p>
+            <p><small>Group quantity: 6</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 6+</p>
+          </div>
+          
+          <div class="product-card">
+            <img src="./images/products/spring_peach.webp" alt="Spring Peach Juice">
+            <h3>Spring Peach Juice</h3>
+            <p>₪6.50 per bottle</p>
+            <p><small>Group quantity: 6</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 6+</p>
+          </div>
+          <div class="product-card">
+            <img src="./images/products/coca_cola_zero.webp" alt="Coca Cola Zero">
+            <h3>Coca Cola Zero</h3>
+            <p>₪6.90 per bottle</p>
+            <p><small>Group quantity: 6</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 6+</p>
+          </div>
+
+          <div class="product-card">
+            <img src="./images/products/sprite.webp" alt="Sprite">
+            <h3>Sprite</h3>
+            <p>₪6.90 per bottle</p>
+            <p><small>Group quantity: 6</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 6+</p>
+          </div>
+          
+          <div class="product-card">
+            <img src="./images/products/sprite_zero.webp" alt="Sprite Zero">
+            <h3>Sprite Zero</h3>
+            <p>₪6.90 per bottle</p>
+            <p><small>Group quantity: 6</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 6+</p>
+          </div>
+          
+      </div>
+    </div>
+
+    <div id="bakery" class="product-category">
+      <h2>Baked Goods</h2>
+      <div class="product-grid">
+    
+      </div>
+    </div>
+
+    <div id="meat" class="product-category">
+      <h2>Meat & Fish</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="./images/products/antrikot.webp" alt="Beef Entrecote">
+          <h3>Beef Entrecote</h3>
+          <p>₪49.90 per kg</p>
+          <p><small>Group quantity: 3kg</small></p>
+          <div class="quantity-controls">
+            <button>-</button>
+            <p>0</p>
+            <button>+</button>
+          </div>
+          <p class="discount">15% off for 3kg+</p>
+        </div>
+        <div class="product-card">
+            <img src="./images/products/chicken.webp" alt="Chicken Drumsticks">
+            <h3>Chicken Drumsticks</h3>
+            <p>₪22.90 per tray</p>
+            <p><small>Group quantity: 3</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 3+</p>
+          </div>
+
+        <div class="product-grid">
+            <div class="product-card">
+              <img src="./images/products/kabab.webp" alt="Kabab Mix">
+              <h3>Kabab Mix</h3>
+              <p>₪29.90 per tray</p>
+              <p><small>Group quantity: 4</small></p>
+              <div class="quantity-controls">
+                <button>-</button>
+                <p>0</p>
+                <button>+</button>
+              </div>
+              <p class="discount">10% off for 4+</p>
+            </div>
+          </div>
+
+      </div>
+    </div>
+
+    <div id="frozen" class="product-category">
+        <h2>Frozen</h2>
+        <div class="product-grid">
+          <div class="product-card">
+            <img src="./images/products/frozen_mama_of.webp" alt="Mama Chicken Nuggets">
+            <h3>Mama Chicken Nuggets</h3>
+            <p>₪23.90 per pack</p>
+            <p><small>Group quantity: 4</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 4+</p>
+          </div>
+          <div class="product-card">
+            <img src="./images/products/maadanot_pitza.webp" alt="Pizza Bites">
+            <h3>Pizza Bites</h3>
+            <p>₪11.90 per pack</p>
+            <p><small>Group quantity: 3</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 3+</p>
+          </div>
+          
+          <div class="product-card">
+            <img src="./images/products/frozen_pees.webp" alt="Frozen Peas">
+            <h3>Frozen Peas</h3>
+            <p>₪8.90 per pack</p>
+            <p><small>Group quantity: 6</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 6+</p>
+          </div>
+          <div class="product-card">
+            <img src="./images/products/sanfrost beens.webp" alt="Green Beans">
+            <h3>Green Beans</h3>
+            <p>₪6.90 per pack</p>
+            <p><small>Group quantity: 4</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 4+</p>
+          </div>
+          <div class="product-card">
+            <img src="./images/products/frozen_pizta.webp" alt="Frozen Pizza">
+            <h3>Frozen Pizza</h3>
+            <p>₪22.00 per pack</p>
+            <p><small>Group quantity: 3</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 3+</p>
+          </div>
+          <div class="product-card">
+            <img src="./images/products/frozen_poteto_burekas.webp" alt="Potato Burekas">
+            <h3>Potato Burekas</h3>
+            <p>₪18.00 per pack</p>
+            <p><small>Group quantity: 4</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 4+</p>
+          </div>
+          <div class="product-card">
+            <img src="./images/products/frozen_cheese_burekas.webp" alt="Cheese Burekas">
+            <h3>Cheese Burekas</h3>
+            <p>₪13.90 per pack</p>
+            <p><small>Group quantity: 3</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 3+</p>
+          </div>
+          <div class="product-card">
+            <img src="./images/products/frozen_shnitzel.webp" alt="Frozen Schnitzel">
+            <h3>Frozen Schnitzel</h3>
+            <p>₪26.90 per pack</p>
+            <p><small>Group quantity: 3</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 3+</p>
+          </div>
+          <div class="product-card">
+            <img src="./images/products/frozen_sweet_poteto.webp" alt="Sweet Potato Fries">
+            <h3>Sweet Potato Fries</h3>
+            <p>₪15.50 per pack</p>
+            <p><small>Group quantity: 5</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 5+</p>
+          </div>
+          
+          
+          <div class="product-card">
+            <img src="./images/products/almond_magnum.webp" alt="Magnum Almond">
+            <h3>Magnum Almond</h3>
+            <p>₪18.00 per box</p>
+            <p><small>Group quantity: 5</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 5+</p>
+          </div>
+          <div class="product-card">
+            <img src="./images/products/white_magnum.webp" alt="Magnum White Mini">
+            <h3>Magnum White Mini</h3>
+            <p>₪24.90 per box</p>
+            <p><small>Group quantity: 3</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 3+</p>
+          </div>
+          <div class="product-card">
+            <img src="./images/products/ben_and_jeres.webp" alt="Ben & Jerry's Ice Cream">
+            <h3>Ben & Jerry's Ice Cream</h3>
+            <p>₪22.00 per unit</p>
+            <p><small>Group quantity: 4</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 4+</p>
+          </div>
+        </div>
+    </div>
+
+    <div id="snacks" class="product-category">
+    <h2>Snacks</h2>
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="./images/products/bisly_baztal.webp" alt="Bisli Onion">
+            <h3>Bisli Onion</h3>
+            <p>₪4.90 per pack</p>
+            <p><small>Group quantity: 10</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 10+</p>
+          </div>
+          <div class="product-card">
+            <img src="./images/products/doritos_green.webp" alt="Doritos Hot Chili">
+            <h3>Doritos Hot Chili</h3>
+            <p>₪5.90 per pack</p>
+            <p><small>Group quantity: 8</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 8+</p>
+          </div>
+          
+          <div class="product-card">
+            <img src="./images/products/doritos_perple.webp" alt="Doritos Grill">
+            <h3>Doritos Grill</h3>
+            <p>₪5.90 per pack</p>
+            <p><small>Group quantity: 8</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 8+</p>
+          </div>
+          
+          <div class="product-card">
+            <img src="./images/products/doritos_yellow.webp" alt="Doritos Natural">
+            <h3>Doritos Natural</h3>
+            <p>₪5.90 per pack</p>
+            <p><small>Group quantity: 8</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 8+</p>
+          </div>
+          <div class="product-card">
+            <img src="./images/products/bisly_gril.webp" alt="Bisli Grill">
+            <h3>Bisli Grill</h3>
+            <p>₪4.90 per pack</p>
+            <p><small>Group quantity: 10</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 10+</p>
+          </div>
+          <div class="product-card">
+            <img src="./images/products/apropo.webp" alt="Apropo Classic">
+            <h3>Apropo Classic</h3>
+            <p>₪5.90 per pack</p>
+            <p><small>Group quantity: 10</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 10+</p>
+          </div>
+          <div class="product-card">
+            <img src="./images/products/tapochips_baztal.webp" alt="Tapuchips Onion">
+            <h3>Tapuchips Onion</h3>
+            <p>₪5.90 per pack</p>
+            <p><small>Group quantity: 10</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 10+</p>
+          </div>
+          
+          <div class="product-card">
+            <img src="./images/products/tapochips_natural.webp" alt="Tapuchips Natural">
+            <h3>Tapuchips Natural</h3>
+            <p>₪5.90 per pack</p>
+            <p><small>Group quantity: 10</small></p>
+            <div class="quantity-controls">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+            <p class="discount">10% off for 10+</p>
+          </div>
+    </div>
+    </div>
+
+    <!-- Floating Cart Button -->
+    <button class="fixed-cart-button" onclick="window.location.href='/cart'">
+      Go to Personal Cart
+    </button>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="text-center text-lg-start">
+    <div id="footer-div" class="text-center p-3 text-white">
+      &copy; 2025 ShareCart. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="catalogJS.js"></script>
+
+</body>
+</html>
+

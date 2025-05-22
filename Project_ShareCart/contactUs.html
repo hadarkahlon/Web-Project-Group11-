@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - ShareCart</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="contactStyle.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+  <!-- Navigation bar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./home.html">
+        <img src="./images/logo.png" alt="logo" id="logo-navbar" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="./home.html">Home</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <main class="container mt-5 d-flex flex-column align-items-center">
+    <h2 class="contact-title">Contact Us</h2>
+
+    <!-- Contact form -->
+    <form id="contact-form" class="contact-form">
+      <div class="mb-3">
+        <label for="full-name" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="full-name" required />
+        <small class="error-message" id="full-name-error"></small>
+      </div>
+
+      <div class="mb-3">
+        <label for="phone" class="form-label">Phone Number</label>
+        <input type="tel" class="form-control" id="phone" required />
+        <small class="error-message" id="phone-error"></small>
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Email Address</label>
+        <input type="email" class="form-control" id="email" required />
+        <small class="error-message" id="email-error"></small>
+      </div>
+
+      <div class="mb-3">
+        <label for="subject" class="form-label">Subject</label>
+        <input type="text" class="form-control" id="subject" required />
+        <small class="error-message" id="subject-error"></small>
+      </div>
+
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-control" id="message" rows="5" required></textarea>
+        <small class="error-message" id="message-error"></small>
+      </div>
+
+      <button type="submit" class="btn btn-danger">Submit</button>
+    </form>
+  </main>
+
+  <!-- Modal for success message -->
+  <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="successModalLabel">Message Sent</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="successModalBody">
+          Your message has been sent successfully. We'll get back to you soon!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" id="success-ok-btn" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer" class="text-center text-lg-start">
+    <div id="footer-div" class="text-center p-3 text-white">
+      © 2025 ShareCart. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Page JS -->
+  <script src="contactJS.js"></script>
+</body>
+</html>

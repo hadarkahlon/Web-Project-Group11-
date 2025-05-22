@@ -1,0 +1,135 @@
+/* Base styles */
+body {
+  font-family: "Spectral", serif;
+  margin: 0;
+  background-color: #ffffff;
+  color: #000;
+}
+
+/* Logo in navbar */
+#logo-navbar {
+  width: 100px;
+  height: 100px;
+}
+
+/* Main layout */
+main {
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Page title */
+.contact-title {
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 32px;
+  width: 100%;
+}
+
+/* Contact form container */
+.contact-form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form group spacing */
+.contact-form > div {
+  width: 100%;
+}
+
+/* Label styles */
+.contact-form label {
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  display: block;
+}
+
+/* Input, textarea, and select fields */
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Textarea specific adjustments */
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Submit button */
+button[type="submit"] {
+  width: 140px;
+  align-self: center;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #DC343B;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button[type="submit"]:hover {
+  background-color: #b52a31;
+  transform: translateY(-1px);
+}
+
+/* Error messages */
+.error-message {
+  color: #DC343B;
+  font-size: 13px;
+  margin-top: -5px;
+  margin-bottom: 10px;
+  display: none;
+}
+
+/* Highlight invalid input */
+input.error,
+textarea.error {
+  border-color: #DC343B;
+}
+
+/* Optional success message container (if used) */
+#success-message {
+  text-align: center;
+  font-size: 18px;
+  color: rgb(248, 248, 248);
+  background-color: #f6767d;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+/* Footer styles */
+#footer {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#footer-div {
+  background-color: #BEBFC5;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}

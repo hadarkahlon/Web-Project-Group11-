@@ -1,0 +1,314 @@
+/* Base layout */
+body {
+  font-family: "Spectral", serif;
+  margin: 0;
+  background-color: #ffffff;
+  color: #000;
+}
+
+/* Headings */
+h1, h2 {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Logo in navbar */
+#logo-navbar {
+  width: 100px;
+  height: 100px;
+}
+
+/* Back button styling */
+.back-button {
+  background: none;
+  border: none;
+  color: #DC343B;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Sticky category navbar */
+.category-nav {
+  position: sticky;
+  top: 125px;
+  z-index: 1000;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* can be changed to space-between or flex-start */
+  gap: 50px;
+  padding: 10px 0 20px;
+  border-bottom: 3px solid #DC343B;
+  scroll-behavior: smooth;
+}
+
+/* Category links */
+.category-nav a {
+  background-color: #F5F5F5;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 20px;
+  color: #000;
+  transition: background-color 0.3s;
+  font-weight: 500;
+}
+
+.category-nav a:hover {
+  background-color: #DC343B;
+  color: white;
+}
+
+/* Product search bar */
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+#search-bar {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  height: 48px;
+  padding-top: 20px;
+}
+
+#search-button {
+  height: 48px;
+  padding: 0 20px;
+  background-color: #DC343B;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#search-button:hover {
+  background-color: #b52a31;
+  transform: translateY(-1px);
+}
+
+/* No results message */
+#no-results-message {
+  display: none;
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+/* Category section layout */
+.product-category {
+  margin-bottom: 60px;
+  scroll-margin-top: 80px;
+}
+
+/* Product cards grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 24px;
+}
+
+/* Product card box */
+.product-card {
+  background-color: #ffffff;
+  border: 4px solid #ccc;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: box-shadow 0.3s;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Product image */
+.product-card img {
+  width: 100%;
+  height: auto;
+  max-height: 180px;
+  object-fit: contain;
+  margin-bottom: 16px;
+  transition: transform 0.3s ease;
+}
+
+/* Quantity controls ( + / - ) */
+.quantity-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.quantity-controls button {
+  background-color: #DC343B;
+  color: #fff;
+  border: none;
+  width: 36px;
+  height: 36px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 0 6px;
+}
+
+/* Discount text */
+.discount {
+  color: green;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+/* Floating button to access cart */
+.fixed-cart-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #DC343B;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Footer styles */
+#footer {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 60px;
+  margin-bottom: 0;
+  background-color: #BEBFC5;
+}
+
+#footer-div {
+  background-color: #BEBFC5;
+  color: white;
+  padding: 15px;
+  font-size: 14px;
+}
+
+footer a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Header top margin */
+h1 {
+  margin-top: 40px;
+}
+
+/* Spacing below category nav */
+.category-nav {
+  margin-bottom: 30px;
+}
+
+/* Extra spacing for search bar */
+.search-container {
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+/* Category title spacing */
+.product-category h2 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+/* Category bottom margin */
+.product-category {
+  margin-bottom: 60px;
+}
+
+/* Sticky navbar */
+nav.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+  background-color: white;
+}
+
+/* Sidebar menu button */
+.menu-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #f2f2f2;
+  border-radius: 12px;
+  padding: 10px;
+  z-index: 2000;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.menu-button img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Hidden sidebar menu */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 220px;
+  height: 100%;
+  background-color: white;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: left 0.3s ease;
+  z-index: 1500;
+}
+
+.side-menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.side-menu a:hover {
+  color: #DC343B;
+}
+
+/* Show sidebar when checkbox is checked */
+.sidebar-toggle:checked + .menu-button + .side-menu {
+  left: 0;
+}
+
+/* Hide sidebar/menu on wide screens */
+@media screen and (min-width: 700px) {
+  .menu-button, .side-menu {
+    display: none;
+  }
+}
+
+/* Responsive: hide category nav on small screens */
+@media screen and (max-width: 700px) {
+  .category-nav {
+    display: none;
+  }
+}

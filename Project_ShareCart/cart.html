@@ -1,0 +1,95 @@
+<!-- ShareCart | Cart Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta + Title -->
+  <meta charset="UTF-8">
+  <title>My Personal Cart</title>
+
+  <!-- CSS + Bootstrap -->
+  <link rel="stylesheet" href="./cartStyle.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200..800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Top navbar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <!-- Brand logo -->
+      <a class="navbar-brand" href="./home.html">
+        <img src="./images/logo.png" alt="logo" id="logo-navbar">
+      </a>
+      <!-- Toggler for mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Navigation links -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="./home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="./contactUs.html">Contact Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="./account.html">My Account</a></li>
+          <li class="nav-item"><a class="nav-link" href="./home.html">LogOut</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>    
+    <!-- Back button to catalog -->
+    <button class="back-button" onclick="window.location.href='catalog.html'">&larr; Back to Catalog</button>
+
+    <!-- Page title -->
+    <h2>My Personal Cart</h2>
+
+    <!-- Product items will be inserted here dynamically -->
+    <section class="product-list"></section>
+
+    <!-- Cart summary and note -->
+    <section class="summary">
+      <p><strong>Total:</strong> ₪0.00</p>
+      <p class="note">The final price will be calculated automatically after the order closes, based on all items ordered by residents.</p>
+    </section>
+
+    <!-- Confirm cart button -->
+    <div class="confirm-container">
+      <button class="confirm-button">Confirm Cart and Join Order</button>
+    </div>
+
+    <!-- Modal for cart confirmation status -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="cartModalLabel">Cart Status</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="cartModalBody">
+            <!-- Message inserted dynamically -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" id="modalCancelBtn" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-danger" id="modalOkBtn">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Page footer -->
+  <footer id="footer" class="text-center text-lg-start">
+    <div id="footer-div" class="text-center p-3 text-white">
+      © 2025 ShareCart. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Cart script logic -->
+  <script src="cartJS.js"></script>
+</body>
+</html>

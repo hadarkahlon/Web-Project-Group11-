@@ -1,0 +1,138 @@
+/* General page layout */
+body {
+    font-family: "Spectral", serif;
+    margin: 0;
+    background-color: #ffffff;
+    color: #000;
+}
+
+/* Logo image in navbar */
+#logo-navbar {
+    width: 100px;
+    height: 100px;
+}
+
+/* Page headings */
+h1, h2 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Header section styling */
+header {
+    text-align: center;
+    padding: 40px 20px 20px;
+    background-color: #f9f9f9;
+    border-bottom: 3px solid #DC343B;
+    position: relative;
+}
+
+/* Back and Logout buttons inside header */
+.back-button,
+.logout-button {
+    position: absolute;
+    top: 20px;
+    background: none;
+    border: none;
+    color: #DC343B;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Position back button to the left */
+.back-button {
+    left: 20px;
+}
+
+/* Position logout button to the right */
+.logout-button {
+    right: 20px;
+}
+
+/* Building address info */
+.building-address {
+    text-align: center;
+    font-size: 18px;
+    margin: 30px 0;
+}
+
+/* Container for all order cards */
+.orders-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+/* Individual order card */
+.order-card {
+    background-color: #ffffff;
+    border: 3px solid #ccc;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s;
+}
+
+/* Hover effect for order card */
+.order-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Join order button */
+.join-button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #DC343B;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for join button */
+.join-button:hover {
+    background-color: #b52a31;
+}
+
+/* Section for create new order button */
+.new-order-container {
+    text-align: center;
+    margin: 40px 0;
+}
+
+/* Create new order button */
+.create-button {
+    padding: 14px 28px;
+    background-color: #DC343B;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover effect for create button */
+.create-button:hover {
+    background-color: #b52a31;
+    transform: translateY(-1px);
+}
+
+/* Footer layout */
+#footer {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/* Footer content style */
+#footer-div {
+    background-color: #BEBFC5; 
+    color: white; 
+}

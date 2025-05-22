@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShareCart - Home Page</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="homeStyle.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200..800&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+  <!-- Navigation bar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./home.html">
+        <img src="./images/logo.png" alt="logo" id="logo-navbar">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="./home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="./contactUS.html">Contact Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" id="navbar-login">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" id="navbar-signup">Sign Up</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main content container -->
+  <div id="main-container">
+    
+    <!-- Left side with feature description -->
+    <div id="left-side">
+      <div id="about-title">What is ShareCart?</div>
+      <div id="about-description">
+        An innovative group purchasing platform for building residents – save on delivery fees and enjoy quantity-based discounts together.
+      </div>
+
+      <!-- Feature highlights -->
+      <div class="features-explained">
+        <div class="feature-row">
+          <div class="feature-icon">
+            <img src="./images/cooperation.png" alt="Cooperation" />
+          </div>
+          <div class="feature-text">
+            <h4>Cooperation</h4>
+            <p>Residents shop together and split the delivery fees. Easy and efficient coordination between neighbors.</p>
+          </div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-icon">
+            <img src="./images/smartManagment.png" alt="Smart Management" />
+          </div>
+          <div class="feature-text">
+            <h4>Smart Management</h4>
+            <p>View all open orders at your building and join or create new ones with just a few clicks.</p>
+          </div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-icon">
+            <img src="./images/richCatalog.png" alt="Rich Catalog" />
+          </div>
+          <div class="feature-text">
+            <h4>Rich Catalog</h4>
+            <p>Choose from hundreds of supermarket products, see what others ordered, and enjoy quantity-based discounts.</p>
+          </div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-icon">
+            <img src="./images/autoCalc.png" alt="Automatic Calculation" />
+          </div>
+          <div class="feature-text">
+            <h4>Automatic Calculation</h4>
+            <p>The system calculates your personal cost automatically – including product price, discounts, and shared delivery fee.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right side with login/register logic -->
+    <div id="right-side">
+      <div id="auth-container">
+
+        <!-- Logo animation -->
+        <div id="logo-container" class="animate-on-load">
+          <img src="./images/logo.png" alt="logo" id="logo">
+        </div>
+
+        <!-- Auth buttons -->
+        <div id="auth-buttons" class="animate-on-load">
+          <button class="btn btn-primary" type="button" id="loginBtn">Login</button>
+          <button class="btn btn-primary" type="button" id="registerBtn">Register</button>
+        </div>
+
+        <!-- Login form -->
+        <form id="login-form" class="auth-form" style="display: none;">
+          <label for="login-username">Username</label>
+          <input type="text" id="login-username" name="username" placeholder="Username" required />
+
+          <label for="login-password">Password</label>
+          <div class="password-wrapper">
+            <input type="password" id="login-password" name="password" placeholder="Password" required />
+            <span class="toggle-password" onclick="togglePassword('login-password', this)">👁</span>
+          </div>
+
+          <div class="form-buttons">
+            <button type="button" id="backBtnLogin">Back</button>
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+
+        <!-- Registration form -->
+        <form id="register-form" class="auth-form" style="display: none;">
+          <label for="reg-firstName">First Name</label>
+          <input type="text" id="reg-firstName" name="firstName" placeholder="First Name" required />
+
+          <label for="reg-lastName">Last Name</label>
+          <input type="text" id="reg-lastName" name="lastName" placeholder="Last Name" required />
+
+          <label for="reg-street">Street Address</label>
+          <input type="text" id="reg-street" name="street" placeholder="Street Address" required />
+
+          <label for="reg-buildingNumber">Building Number</label>
+          <input type="text" id="reg-buildingNumber" name="buildingNumber" placeholder="Building Number" required />
+          <small class="error-message" id="building-error"></small>
+
+          <label for="reg-city">City</label>
+          <input type="text" id="reg-city" name="city" placeholder="City" required />
+
+          <label for="reg-username">Username</label>
+          <input type="text" id="reg-username" name="username" placeholder="Username" required />
+
+          <label for="reg-password">Password</label>
+          <div class="password-wrapper">
+            <input type="password" id="reg-password" name="password" placeholder="Password" required />
+            <span class="toggle-password" onclick="togglePassword('reg-password', this)">👁</span>
+          </div>
+          <small class="error-message" id="password-error"></small>
+
+          <label for="reg-phone">Phone Number</label>
+          <input type="tel" id="reg-phone" name="phone" placeholder="Phone Number" required />
+          <small class="error-message" id="phone-error"></small>
+
+          <label for="reg-creditCard">Credit Card Number</label>
+          <input type="text" id="reg-creditCard" name="creditCard" placeholder="Credit Card Number" required />
+          <small class="error-message" id="creditCard-error"></small>
+
+          <!-- Expiration date inputs -->
+          <label for="reg-exp-month">Card Expiry</label>
+          <div class="d-flex gap-2">
+            <select id="reg-exp-month" name="expMonth" class="form-select" required>
+              <option value="">MM</option>
+              <option value="01">01</option><option value="02">02</option><option value="03">03</option>
+              <option value="04">04</option><option value="05">05</option><option value="06">06</option>
+              <option value="07">07</option><option value="08">08</option><option value="09">09</option>
+              <option value="10">10</option><option value="11">11</option><option value="12">12</option>
+            </select>
+            <select id="reg-exp-year" name="expYear" class="form-select" required>
+              <option value="">YY</option>
+              <option value="2025">2025</option><option value="2026">2026</option>
+              <option value="2027">2027</option><option value="2028">2028</option><option value="2029">2029</option>
+            </select>
+          </div>
+
+          <label for="reg-cvv">CVV</label>
+          <input type="text" id="reg-cvv" name="cvv" placeholder="CVV" required />
+          <small class="error-message" id="cvv-error"></small>
+
+          <!-- Submit and back buttons -->
+          <div class="form-buttons">
+            <button type="button" id="backBtnRegister">Back</button>
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer" class="text-center text-lg-start">
+    <div id="footer-div" class="text-center p-3 text-white">
+      © 2025 ShareCart. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Success modal shown on form submission -->
+  <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="successModalLabel">Success</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="successModalBody">
+          <!-- Content will be inserted dynamically from JS -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS file for logic -->
+  <script src="homeJS.js"></script>
+</body>
+</html>
